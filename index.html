@@ -1,28 +1,110 @@
-   <!DOCTYPE html>
-   <html>
-   <head>
-       <title>Erez Kohanski</title>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <style>
-           body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
-           h1 { color: #333; }
-           .app { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
-       </style>
-   </head>
-   <body>
-       <h1>Erez Kohanski</h1>
-       <p>Welcome to my website!</p>
-       
-       <div class="app">
-           <h2>🚁 FlappyJet</h2>
-           <p>An exciting helicopter adventure game with tournaments, achievements, and social features.</p>
-           <p><a href="https://play.google.com/store/apps/details?id=com.flappyjet.pro.flappy_jet_pro">Download on Google Play</a></p>
-           <p><a href="/flappyjet-privacy-policy/">Privacy Policy</a></p>
-       </div>
-       
-       <footer>
-           <p>© 2025 Erez Kohanski. All rights reserved.</p>
-       </footer>
-   </body>
-   </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Erez Kohanski - Mobile Games</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+        }
+        .app {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .app:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .app h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .app p {
+            color: #c0c0c0;
+            line-height: 1.6;
+        }
+        .app-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .app-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        .app-links a:hover {
+            transform: scale(1.05);
+        }
+        .play-store {
+            background: #00c853;
+            color: white;
+        }
+        .privacy {
+            background: rgba(255,255,255,0.15);
+            color: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+        }
+        .gem-icon { color: #6c5ce7; }
+        .helicopter-icon { color: #00b894; }
+    </style>
+</head>
+<body>
+    <h1>Erez Kohanski</h1>
+    <p class="subtitle">Mobile Game Developer</p>
+    
+    <div class="app">
+        <h2><span class="gem-icon">💎</span> Gemsweepz</h2>
+        <p>A captivating gem-hunting puzzle adventure! Use logic and strategy to uncover hidden gems across 5 unique themed worlds. Master the chord-click technique, earn stars, unlock achievements, and prove your puzzle-solving skills!</p>
+        <div class="app-links">
+            <a href="https://play.google.com/store/apps/details?id=com.gemsweepz.app" class="play-store">📱 Google Play</a>
+            <a href="/gemsweepz-privacy-policy/" class="privacy">🔒 Privacy Policy</a>
+        </div>
+    </div>
+
+    <div class="app">
+        <h2><span class="helicopter-icon">🚁</span> FlappyJet</h2>
+        <p>An exciting helicopter adventure game with tournaments, achievements, and social features. Navigate through challenging obstacles and compete with players worldwide!</p>
+        <div class="app-links">
+            <a href="https://play.google.com/store/apps/details?id=com.flappyjet.pro.flappy_jet_pro" class="play-store">📱 Google Play</a>
+            <a href="/flappyjet-privacy-policy/" class="privacy">🔒 Privacy Policy</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2026 Erez Kohanski. All rights reserved.</p>
+    </footer>
+</body>
+</html>
