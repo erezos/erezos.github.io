@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bffai.contrail",
+      "sha256_cert_fingerprints": [
+        "AF:57:D2:55:B9:F2:9D:8A:90:1D:CB:D8:24:CF:3E:AE:BA:FD:1C:D3:76:8D:FB:87:1A:FB:74:E4:2E:82:F5:D5"
+      ]
+    }
+  }
+]

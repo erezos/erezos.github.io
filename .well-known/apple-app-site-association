@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["2NH9R2WLTT.com.bffai.contrail"],
+        "components": [
+          { "/": "/contrail/d/*" },
+          { "/": "/contrail/c/*" },
+          { "/": "/contrail/daily/*" },
+          { "/": "/contrail/level/*" }
+        ]
+      }
+    ]
+  }
+}
