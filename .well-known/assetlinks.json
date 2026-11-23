@@ -5,7 +5,10 @@
       "namespace": "android_app",
       "package_name": "com.bffai.contrail",
       "sha256_cert_fingerprints": [
-        "AF:57:D2:55:B9:F2:9D:8A:90:1D:CB:D8:24:CF:3E:AE:BA:FD:1C:D3:76:8D:FB:87:1A:FB:74:E4:2E:82:F5:D5"
+        "AF:57:D2:55:B9:F2:9D:8A:90:1D:CB:D8:24:CF:3E:AE:BA:FD:1C:D3:76:8D:FB:87:1A:FB:74:E4:2E:82:F5:D5",
+        "83:8A:FE:0D:7D:70:85:A7:CB:DC:29:AA:83:50:C3:08:EB:50:16:38:E6:E3:3A:36:63:DC:FF:EF:E5:3F:88:CD",
+        "00:7D:C3:58:1C:5F:29:F7:23:C5:1A:A1:8F:FE:4B:CB:D1:63:A8:28:0A:E6:BB:5A:42:63:E6:02:2D:80:D0:6F",
+        "AB:64:30:47:FA:4F:D9:AC:D6:2C:E8:93:6C:02:8C:4D:FD:78:25:A0:1C:45:95:EF:E1:E2:AC:BF:30:B5:52:7E"
       ]
     }
   }
