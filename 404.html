@@ -5,15 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        // Contrail share links (/contrail/d/<date>, /contrail/c/<n>?s=<k>) open
-        // the game when it is installed; otherwise they land here and go on to
-        // the Contrail page, carrying the link so it can offer "Open in app".
+        // Contrail share links (/contrail/d/<date>, /contrail/c/<n>?s=<k>,
+        // /contrail/get) open the game when it is installed. Otherwise they
+        // land here: an iPhone or iPad goes straight to the App Store, an
+        // Android phone to Google Play once the game is public there
+        // (PLAY_LIVE), and everything else to the Contrail page, carrying
+        // the link so it can offer "Open in app".
         (function () {
+            var IOS = 'https://apps.apple.com/app/id6836382227';
+            var PLAY_LIVE = false; // set true on the day the Play listing is public
             var p = location.pathname;
-            if (p.indexOf('/contrail/') === 0) {
-                var rest = p.slice('/contrail/'.length).replace(/\/+$/, '');
-                location.replace('/contrail/' + (rest ? '?to=' + encodeURIComponent(rest + location.search) : ''));
+            if (p.indexOf('/contrail/') !== 0) return;
+            var rest = p.slice('/contrail/'.length).replace(/\/+$/, '') + location.search;
+            var m = /^(c|level)\/[0-9]+(\?s=[0-9]+)?|^(d|daily)\/[0-9]{4}-[0-9]{2}-[0-9]{2}/.exec(rest);
+            var target = m ? m[0] : '';
+            var kind = !target ? 'album' : /^(c|level)/.test(target) ? 'challenge' : 'daily';
+            var ua = navigator.userAgent || '';
+            var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+            var android = /Android/i.test(ua);
+            if (ios) return location.replace(IOS);
+            if (android && PLAY_LIVE) {
+                var ref = 'utm_source=share&utm_medium=link&utm_campaign=' + kind +
+                    (target ? '&utm_content=' + encodeURIComponent(target) : '');
+                return location.replace('https://play.google.com/store/apps/details?id=com.bffai.contrail&referrer=' +
+                    encodeURIComponent(ref));
             }
+            location.replace('/contrail/' + (target ? '?to=' + encodeURIComponent(target) : ''));
         })();
     </script>
     <style>
