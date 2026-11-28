@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erezos.github.io/sitemap.xml

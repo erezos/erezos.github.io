@@ -1,41 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contrail: Airport Puzzle</title>
+    <title>Contrail: Airport Puzzle | A relaxing plane puzzle with no timers</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A calm airport puzzle: send every plane out on time and draw pictures in the sky.">
+    <meta name="description" content="Contrail is a relaxing airport puzzle game for iPhone and iPad, coming to Android. Tap planes to send them off in order, park the rest, and every takeoff draws a line of a picture in the sky. No timers, no move limits, 300 pictures across 15 cities.">
+    <link rel="canonical" href="https://erezos.github.io/contrail/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Contrail">
     <meta property="og:title" content="Contrail: Airport Puzzle">
-    <meta property="og:description" content="A calm airport puzzle. Send every plane out on time and draw pictures in the sky. Free to play.">
+    <meta property="og:description" content="A calm airport puzzle. Send every plane out in order and draw pictures in the sky. Free to play.">
     <meta property="og:url" content="https://erezos.github.io/contrail/">
     <meta property="og:image" content="https://erezos.github.io/contrail/icon.png">
     <meta name="twitter:card" content="summary">
     <meta name="apple-itunes-app" content="app-id=6836382227">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["VideoGame", "MobileApplication"],
+      "name": "Contrail: Airport Puzzle",
+      "alternateName": "Contrail",
+      "url": "https://erezos.github.io/contrail/",
+      "image": "https://erezos.github.io/contrail/icon.png",
+      "description": "A relaxing airport puzzle game. Tap the plane the departures board calls, park the others on stands, and every takeoff draws one line of a picture in the sky. No timers and no move limits. 300 pictures across 15 cities, a daily set of three boards, an airfield to build and an X-ray mini-game called Lost & Found.",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Puzzle",
+      "genre": ["Puzzle", "Logic", "Casual", "Sorting"],
+      "gamePlatform": ["iOS", "iPadOS"],
+      "operatingSystem": "iOS, iPadOS",
+      "playMode": "SinglePlayer",
+      "inLanguage": ["en", "de", "es", "fr", "pt", "id", "he"],
+      "installUrl": "https://apps.apple.com/app/id6836382227",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "screenshot": [
+        "https://erezos.github.io/contrail/shots/takeoffs_paint_the_sky.jpg",
+        "https://erezos.github.io/contrail/shots/build_your_airfield.jpg",
+        "https://erezos.github.io/contrail/shots/daily_departures.jpg",
+        "https://erezos.github.io/contrail/shots/city_albums.jpg"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What kind of game is Contrail?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Contrail is a single-player logic puzzle set at an airport. A departures board calls planes by airline. You tap the called plane to send it to the runway and park the planes that are in the way on stands. Every takeoff draws one line, and a cleared board shows a finished picture in the sky." } },
+        { "@type": "Question", "name": "Is there a timer or a move limit?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. There are no timers and no move limits. You can think about a board for as long as you like." } },
+        { "@type": "Question", "name": "Is Contrail free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Contrail is free to download and play." } },
+        { "@type": "Question", "name": "Which devices does it run on?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Contrail runs on iPhone and iPad and is available on the App Store. The Android version is coming to Google Play." } },
+        { "@type": "Question", "name": "How much is there to play?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There are 300 boards across 15 cities, each with its own sky picture, plus Daily Departures: three new boards every day that are the same for every player." } },
+        { "@type": "Question", "name": "Is it colorblind-friendly?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Contrail has colorblind patterns, a shape badge on every plane, a left-handed mode, larger text and a reduced-motion setting." } },
+        { "@type": "Question", "name": "Which languages does it support?",
+          "acceptedAnswer": { "@type": "Answer", "text": "English, German, Spanish, French, Portuguese, Indonesian and Hebrew." } },
+        { "@type": "Question", "name": "What is Lost & Found?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Lost & Found is a mini-game that opens when you build the terminal on your airfield. You X-ray bags to find the toys hidden inside and return them to fill your shelves for rewards." } }
+      ]
+    }
+    </script>
     <style>
+        :root { --ink: #f4f1ea; --dim: #c3c9e2; --navy: #101a33; --cream: #fff6e6; --gold: #e8c25a; --line: rgba(244,241,234,0.16); }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
+            margin: 0; color: var(--ink);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            max-width: 640px; margin: 0 auto; padding: 48px 20px; min-height: 100vh; box-sizing: border-box;
-            background: linear-gradient(180deg, #1b2440 0%, #3b3a63 60%, #f2a65a 140%);
-            color: #fff; text-align: center;
+            background: #141a33;
+            line-height: 1.6; -webkit-font-smoothing: antialiased;
         }
-        h1 { font-size: 2.2em; margin: 12px 0 6px; }
-        .icon { width: 96px; height: 96px; border-radius: 22px; }
-        p { color: #d6d9e6; line-height: 1.6; }
-        .card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 24px; margin: 28px 0; }
-        .btn { display: inline-block; margin: 8px; padding: 14px 26px; border-radius: 12px; text-decoration: none; font-weight: 600; color: #1b2440; background: #f2a65a; }
-        .btn.ghost { background: rgba(255,255,255,0.15); color: #fff; }
-        .soon { font-size: 0.95em; color: #c8cbe0; }
+        .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+        .sky { background: linear-gradient(180deg, #0b1430 0%, #1e2d63 34%, #5b4a8b 62%, #a8607e 80%, #f08c5a 100%); border-bottom: 6px solid #0d1226; overflow: hidden; }
+        .sky .shots { padding-bottom: 0; margin-bottom: -46px; }
+        .sky .shots img { border-radius: 18px 18px 0 0; }
+        header { text-align: center; padding: 56px 0 8px; }
+        .icon { width: 104px; height: 104px; border-radius: 24px; box-shadow: 0 12px 32px rgba(5,9,18,0.5); }
+        h1 { font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.1; margin: 20px 0 10px; letter-spacing: -0.01em; }
+        .lead { font-size: 1.15rem; color: var(--dim); max-width: 34em; margin: 0 auto; }
+        .facts { list-style: none; padding: 0; margin: 22px auto 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+        .facts li { font-size: 0.86rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(16,26,51,0.45); }
+        .get { text-align: center; margin: 28px 0 8px; }
+        .btn { display: inline-block; margin: 6px; padding: 14px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; color: var(--navy); background: var(--cream); box-shadow: 0 4px 0 #c9b88f; }
+        .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #c9b88f; }
+        .soon { font-size: 0.95rem; color: var(--dim); margin: 8px 0 0; }
         #open, #play { display: none; }
-        footer { margin-top: 48px; font-size: 0.9em; }
-        footer a { color: #d6d9e6; }
+        .card { background: rgba(16,26,51,0.62); border: 1px solid var(--line); border-radius: 18px; padding: 22px; margin: 24px auto; max-width: 560px; text-align: center; }
+        .card p { margin: 0 0 12px; }
+        .shots { display: flex; gap: 14px; overflow-x: auto; padding: 28px 20px 18px; margin: 0 -20px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+        .shots img { flex: 0 0 auto; width: 210px; height: auto; border-radius: 18px; scroll-snap-align: center; box-shadow: 0 14px 30px rgba(5,9,18,0.45); }
+        @media (min-width: 940px) { .shots { justify-content: center; overflow: visible; } }
+        section { padding: 30px 0; }
+        h2 { font-size: 1.5rem; margin: 0 0 14px; }
+        h2::after { content: ''; display: block; width: 44px; height: 3px; background: var(--gold); border-radius: 2px; margin-top: 8px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+        .tile { background: rgba(16,26,51,0.62); border: 1px solid var(--line); border-radius: 16px; padding: 18px 18px 16px; }
+        .tile h3 { margin: 0 0 6px; font-size: 1.05rem; }
+        .tile p { margin: 0; color: var(--dim); font-size: 0.98rem; }
+        ol.steps { padding-left: 1.2em; margin: 0; }
+        ol.steps li { margin: 0 0 8px; color: var(--dim); }
+        ol.steps li b { color: var(--ink); }
+        details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+        summary { cursor: pointer; font-weight: 600; list-style: none; position: relative; padding-right: 28px; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; position: absolute; right: 4px; top: -2px; font-size: 1.3rem; color: var(--gold); }
+        details[open] summary::after { content: '\2212'; }
+        details p { margin: 8px 0 0; color: var(--dim); }
+        footer { text-align: center; padding: 34px 0 56px; font-size: 0.92rem; color: var(--dim); }
+        footer a { color: var(--dim); }
     </style>
 </head>
 <body>
-    <img class="icon" src="icon.png" alt="">
-    <h1>Contrail: Airport Puzzle</h1>
-    <p>Send every plane out on time, draw a picture in the sky with each level and build your airfield one building at a time. A new Daily every day.</p>
+<div class="sky"><div class="wrap">
+    <header>
+        <img class="icon" src="icon.png" alt="Contrail app icon" width="104" height="104">
+        <h1>Contrail: Airport Puzzle</h1>
+        <p class="lead">A relaxing airport puzzle. Send the planes out in the right order, and every takeoff draws one line of a picture in the sky.</p>
+        <ul class="facts">
+            <li>No timers</li>
+            <li>No move limits</li>
+            <li>300 pictures</li>
+            <li>15 cities</li>
+            <li>Free to play</li>
+        </ul>
+    </header>
 
     <div class="card" id="open">
         <p id="open-text">A friend sent you a board.</p>
@@ -43,32 +135,82 @@
         <p class="soon">No game yet? Get it below, then tap the link in your chat again.</p>
     </div>
 
-    <div class="card">
+    <div class="get">
         <a class="btn" id="ios" href="https://apps.apple.com/app/id6836382227">Get it on the App Store</a>
         <a class="btn" id="play" href="https://play.google.com/store/apps/details?id=com.bffai.contrail">Get it on Google Play</a>
-        <p class="soon" id="play-soon">Coming soon to Google Play.</p>
+        <p class="soon" id="play-soon">For iPhone and iPad. Coming soon to Google Play.</p>
     </div>
+
+    <div class="shots" aria-label="Screenshots">
+        <img src="shots/takeoffs_paint_the_sky.jpg" width="480" height="1043" loading="lazy" alt="A Contrail board: planes on the apron, a departures board, and contrail lines drawing a picture in the dusk sky">
+        <img src="shots/build_your_airfield.jpg" width="480" height="1043" loading="lazy" alt="The player's airfield with a control tower being built with Miles">
+        <img src="shots/daily_departures.jpg" width="480" height="1043" loading="lazy" alt="Daily Departures: three new boards every day">
+        <img src="shots/city_albums.jpg" width="480" height="1043" loading="lazy" alt="City albums: a poster of sky pictures for every city">
+    </div>
+</div></div>
+<div class="wrap">
+
+    <section>
+        <h2>What is Contrail?</h2>
+        <p>Contrail is a single-player logic puzzle game for iPhone and iPad, with Android on the way. Each board is a small airport: planes wait on the apron, and a departures board calls them by airline. You tap the plane that is called to send it to the runway, and park the planes that are in its way on stands. Stands fill up, so you have to think about which plane you will need next.</p>
+        <p>Every takeoff leaves a contrail. Clear the board and the trails join into a glowing picture over the city: a lighthouse cottage in Porto, a hill tram in Lisbon, a puffin over Reykjavik, a paper crane over Kyoto.</p>
+    </section>
+
+    <section>
+        <h2>How it plays</h2>
+        <ol class="steps">
+            <li><b>Tap the called plane.</b> It taxis to the runway and takes off.</li>
+            <li><b>Park what is in the way.</b> A plane that is not called goes to a stand. The last plane parked is the first to leave.</li>
+            <li><b>Don't box yourself in.</b> Stands fill up and jumbos take two slots. Plan a move or two ahead.</li>
+            <li><b>Stuck?</b> Call the Tow. The tug lifts the blocking plane out and you carry on.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>What's in the game</h2>
+        <div class="grid">
+            <div class="tile"><h3>300 sky pictures, 15 cities</h3><p>Porto, Lisbon, Marseille, Valletta, Reykjavik, Oslo, Cape Town, Valparaíso, Halifax, Hobart, Kyoto, Istanbul, Havana, Hanoi and Québec. Fill a city's album and its poster is yours to save or share.</p></div>
+            <div class="tile"><h3>Daily Departures</h3><p>Three new boards every day, Easy, Medium and Hard, the same for every player. One board a day keeps your streak.</p></div>
+            <div class="tile"><h3>Build your airfield</h3><p>Every win pays Miles. Spend them on a control tower, a terminal, a hangar and more. Big builds finish overnight.</p></div>
+            <div class="tile"><h3>Lost &amp; Found</h3><p>Build the terminal to open an X-ray mini-game. Scan the bags, find the toys hidden inside, and fill your shelves for rewards.</p></div>
+            <div class="tile"><h3>New rules as you travel</h3><p>De-icing, VIP departures, catering, codeshares, slot swaps and more arrive one at a time as you move from city to city.</p></div>
+            <div class="tile"><h3>Made to be comfortable</h3><p>No timers and no move limits. Colorblind patterns, shape badges, a left-handed mode, larger text and reduced motion. Seven languages.</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Questions</h2>
+        <details><summary>What kind of game is Contrail?</summary><p>Contrail is a single-player logic puzzle set at an airport. A departures board calls planes by airline. You tap the called plane to send it to the runway and park the planes that are in the way on stands. Every takeoff draws one line, and a cleared board shows a finished picture in the sky.</p></details>
+        <details><summary>Is there a timer or a move limit?</summary><p>No. There are no timers and no move limits. You can think about a board for as long as you like.</p></details>
+        <details><summary>Is Contrail free?</summary><p>Yes. Contrail is free to download and play.</p></details>
+        <details><summary>Which devices does it run on?</summary><p>Contrail runs on iPhone and iPad and is available on the App Store. The Android version is coming to Google Play.</p></details>
+        <details><summary>How much is there to play?</summary><p>There are 300 boards across 15 cities, each with its own sky picture, plus Daily Departures: three new boards every day that are the same for every player.</p></details>
+        <details><summary>Is it colorblind-friendly?</summary><p>Yes. Contrail has colorblind patterns, a shape badge on every plane, a left-handed mode, larger text and a reduced-motion setting.</p></details>
+        <details><summary>Which languages does it support?</summary><p>English, German, Spanish, French, Portuguese, Indonesian and Hebrew.</p></details>
+        <details><summary>What is Lost &amp; Found?</summary><p>Lost &amp; Found is a mini-game that opens when you build the terminal on your airfield. You X-ray bags to find the toys hidden inside and return them to fill your shelves for rewards.</p></details>
+    </section>
 
     <footer>
         <a href="/contrail-privacy-policy/">Privacy Policy</a> · <a href="/">More games</a>
     </footer>
+</div>
 
-    <script>
-        (function () {
-            var PLAY_LIVE = false; // set true on the day the Play listing is public (also in /404.html)
-            if (PLAY_LIVE) {
-                document.getElementById('play').style.display = 'inline-block';
-                document.getElementById('play-soon').style.display = 'none';
-            }
-            // ?to=d/2026-11-08 or ?to=c/27?s=6 (set by /404.html): offer the
-            // app's own scheme, which the game parses like the web link.
-            var to = new URLSearchParams(location.search).get('to');
-            if (!to || !/^(d|c|daily|level)\/[0-9-]+(\?s=[0-9]+)?$/.test(to)) return;
-            document.getElementById('open-link').href = 'contrail://' + to;
-            document.getElementById('open-text').textContent =
-                to.charAt(0) === 'd' ? 'A friend shared a Daily board.' : 'A friend challenged you to a level.';
-            document.getElementById('open').style.display = 'block';
-        })();
-    </script>
+<script>
+    (function () {
+        var PLAY_LIVE = false; // set true on the day the Play listing is public (also in /404.html)
+        if (PLAY_LIVE) {
+            document.getElementById('play').style.display = 'inline-block';
+            document.getElementById('play-soon').style.display = 'none';
+        }
+        // ?to=d/2026-11-08 or ?to=c/27?s=6 (set by /404.html): offer the
+        // app's own scheme, which the game parses like the web link.
+        var to = new URLSearchParams(location.search).get('to');
+        if (!to || !/^(d|c|daily|level)\/[0-9-]+(\?s=[0-9]+)?$/.test(to)) return;
+        document.getElementById('open-link').href = 'contrail://' + to;
+        document.getElementById('open-text').textContent =
+            to.charAt(0) === 'd' ? 'A friend shared a Daily board.' : 'A friend challenged you to a level.';
+        document.getElementById('open').style.display = 'block';
+    })();
+</script>
 </body>
 </html>
